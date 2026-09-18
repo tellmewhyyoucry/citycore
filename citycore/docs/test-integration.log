@@ -1,0 +1,32 @@
+
+> citycore-rp@1.0.0 test:integration
+> npm run build:api && node --test dist/tests/*.integration.js
+
+
+> citycore-rp@1.0.0 build:api
+> tsc -p tsconfig.json
+
+✔ same simultaneous deposit request commits once (335.438449ms)
+✔ opposite transfers avoid deadlocks and conserve money (587.785954ms)
+✔ concurrent overspend permits only available balance (500.706563ms)
+✔ recipient limit rolls back sender debit and ledger (214.989641ms)
+✔ request ID cannot be reused with changed payload (115.948221ms)
+✔ last item cannot be duplicated between two simultaneous recipients (364.407357ms)
+✔ full recipient inventory rolls back item removal (238.589445ms)
+✔ overweight purchase rolls back debit (111.886294ms)
+✔ sell and consume persist quantities, cash and hunger (115.702399ms)
+✔ courier cannot pay early, remotely, or without own vehicle; duplicate completion pays once (116.264561ms)
+✔ logout and reconnect cancel unfinished shift without payment, persist inventory and invalidate old session (204.090372ms)
+✔ new login invalidates previous session (157.94146ms)
+✔ distance, dimensions, unknown target and unaffordable purchases are rejected (254.365142ms)
+✔ medkit consumes once and does not replay GTA health effect (100.589831ms)
+✔ state survives a fresh database connection and migration is repeatable (123.50571ms)
+✔ HTTP health, key boundaries and authenticated action flow (565.764763ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3897.040933

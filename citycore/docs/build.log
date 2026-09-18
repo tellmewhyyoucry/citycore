@@ -1,0 +1,25 @@
+
+> citycore-rp@1.0.0 build
+> npm run build:api && npm run build:rage && npm run build:ui
+
+
+> citycore-rp@1.0.0 build:api
+> tsc -p tsconfig.json
+
+
+> citycore-rp@1.0.0 build:rage
+> tsc -p ragemp/server/tsconfig.json --noEmit && tsc -p ragemp/client/tsconfig.json --noEmit && node scripts/build-rage.mjs
+
+
+> citycore-rp@1.0.0 build:ui
+> vite build --config ui/vite.config.mjs
+
+vite v6.4.3 building for production...
+transforming...
+✓ 11 modules transformed.
+rendering chunks...
+computing gzip size...
+../release/ragemp/client_packages/citycore/ui/index.html                  0.35 kB │ gzip:  0.26 kB
+../release/ragemp/client_packages/citycore/ui/assets/index-n72SY26A.css   9.52 kB │ gzip:  2.83 kB
+../release/ragemp/client_packages/citycore/ui/assets/index-BwUlfmLE.js   82.53 kB │ gzip: 32.36 kB
+✓ built in 1.25s

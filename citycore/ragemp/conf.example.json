@@ -1,0 +1,9 @@
+{
+  "announce": false,
+  "name": "CityCore RP | Portfolio Demo",
+  "gamemode": "CityCore RP",
+  "maxplayers": 20,
+  "port": 22005,
+  "stream-distance": 300.0,
+  "enable-nodejs": true
+}

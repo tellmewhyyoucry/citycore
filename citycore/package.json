@@ -1,0 +1,29 @@
+{
+  "name": "citycore-rp", "version": "1.0.0", "private": true,
+  "description": "RAGE MP portfolio: courier, inventory and banking on MariaDB",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "build": "npm run build:api && npm run build:rage && npm run build:ui",
+    "build:api": "tsc -p tsconfig.json",
+    "build:rage": "tsc -p ragemp/server/tsconfig.json --noEmit && tsc -p ragemp/client/tsconfig.json --noEmit && node scripts/build-rage.mjs",
+    "build:ui": "vite build --config ui/vite.config.mjs",
+    "dev:ui": "vite --config ui/vite.config.mjs --host 127.0.0.1",
+    "start": "node dist/src/main.js",
+    "db:migrate": "node dist/src/infra/migrate.js",
+    "test": "npm run build:api && node --test dist/tests/*.test.js",
+    "test:integration": "npm run build:api && node --test dist/tests/*.integration.js",
+    "bench": "node dist/scripts/benchmark.js",
+    "setup": "node scripts/setup.mjs",
+    "install:rage": "node scripts/install-rage.mjs"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.0", "@nestjs/core": "^11.1.0", "@nestjs/platform-express": "^11.1.0",
+    "dotenv": "^16.6.0", "ioredis": "^5.6.0", "knex": "^3.1.0", "mysql2": "^3.14.0",
+    "reflect-metadata": "^0.2.2", "rxjs": "^7.8.2", "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@ragempcommunity/types-client": "^2.1.0", "@ragempcommunity/types-server": "^2.1.0",
+    "@types/node": "^22.15.0", "esbuild": "^0.25.0", "typescript": "^5.8.3",
+    "vite": "^6.3.0", "vue": "^3.5.0", "@vitejs/plugin-vue": "^5.2.0"
+  }
+}

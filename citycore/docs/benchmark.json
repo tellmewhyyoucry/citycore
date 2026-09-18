@@ -1,0 +1,18 @@
+{
+  "scope": "GameService + Knex + MariaDB; excludes HTTP, RAGE MP, GTA clients and authentication",
+  "date": "2026-09-07T13:01:49.894Z",
+  "node": "v24.19.0",
+  "os": "linux",
+  "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "logicalCpus": 9,
+  "mariadb": "10.11.14-MariaDB-0ubuntu0.24.04.1",
+  "workers": 10,
+  "requests": 1000,
+  "errors": 0,
+  "conserved": true,
+  "elapsedMs": 1913,
+  "throughput": 523,
+  "p50Ms": 14.73,
+  "p95Ms": 39.65,
+  "p99Ms": 110.23
+}

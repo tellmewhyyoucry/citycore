@@ -1,0 +1,23 @@
+
+> citycore-rp@1.0.0 test
+> npm run build:api && node --test dist/tests/*.test.js
+
+
+> citycore-rp@1.0.0 build:api
+> tsc -p tsconfig.json
+
+✔ bank rejects fractional, negative, huge and string amounts (3.919969ms)
+✔ client cannot inject a reward, identity or unknown action (0.584468ms)
+✔ transfer requires a positive recipient; every mutation requires UUID (0.31114ms)
+✔ world rejects non-finite positions and invalid health (0.485985ms)
+✔ credentials normalize case and enforce length (0.761774ms)
+✔ distance includes height (0.142713ms)
+✔ local limiter rejects excess requests independently per actor (0.367182ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 213.505993
